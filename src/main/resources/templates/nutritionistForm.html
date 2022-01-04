@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section style="background-color:blanchedalmond">
+    <div class="container">
+        <div class="card mt-3 justify-content-center" style="width: 70rem;background-color:grey" >
+            <div th:if="${session.msg}" th:replace="message::message6"></div>
+            <div class="card-body">
+                <form th:action="@{/addnewneutritionist}" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Name</label>
+                        <input name="name" type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword3" class="form-label">Phone No</label>
+                        <input name="phoneNumber" type="number" class="form-control" id="exampleInputPassword3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword4" class="form-label">Degree</label>
+                        <input name="degree" type="text" class="form-control" id="exampleInputPassword4">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input name="startConsultation" class="form-check-input" type="radio"  id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Book For Consultation
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input name="gender" class="form-check-input" type="radio" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No Consultation
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"> Book For Consultation</button>
+                    <button type="submit" class="btn btn-primary">No Consultation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

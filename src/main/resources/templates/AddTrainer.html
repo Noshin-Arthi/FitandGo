@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section style="background-color:blanchedalmond">
+    <div class="container">
+        <div class="card mt-3 justify-content-center" style="width: 70rem;background-color:grey" >
+            <div th:if="${session.msg}" th:replace="message::message2"></div>
+            <div class="card-body">
+                <form th:action="@{/addnewtrainer}" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword2" class="form-label">Phone No</label>
+                        <input type="number" class="form-control" id="exampleInputPassword2" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword3" class="form-label">Years of Experience</label>
+                        <input type="number" class="form-control" id="exampleInputPassword3" name="experience">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="gymId">
+                            <option selected>Open this select menu</option>
+                            <th:block th:each="gym : ${gymList}">
+                                <option th:value="${gym.gymId}" th:text="${gym.name}">null</option>
+
+                            </th:block>
+
+                        </select>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

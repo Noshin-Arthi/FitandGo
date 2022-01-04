@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${session.msg}" class="alert alert-warning alert-dismissible fade show" role="alert" th:fragment="message1">
+    <strong th:text="'Welcome, '+${session.msg}+' To Our Gym!'">Holy guacamole!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+<div th:if="${session.msg}" class="alert alert-warning alert-dismissible fade show" role="alert" th:fragment="message2">
+    <strong th:text="'Respect for our new Trainer , '+${session.msg}">Holy guacamole!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div th:if="${session.msg}" class="alert alert-warning alert-dismissible fade show" role="alert" th:fragment="message3">
+    <strong th:text="'Welcome Admin '+${session.msg}">Holy guacamole!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+<div th:if="${session.msg}" class="alert alert-warning alert-dismissible fade show" role="alert" th:fragment="message4">
+    <strong th:text="${session.msg}+'GYM added Successfully!' ">Holy guacamole!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+<div th:if="${session.msg}" class="alert alert-warning alert-dismissible fade show" role="alert" th:fragment="message5">
+    <strong th:text="${session.msg}+' added Successfully!'">Holy guacamole!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div th:if="${session.msg}" class="alert alert-warning alert-dismissible fade show" role="alert" th:fragment="message6">
+    <strong th:text="${session.msg}+' Request Successful!'" >Holy guacamole!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+</body>
+</html>

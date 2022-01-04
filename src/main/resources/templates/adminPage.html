@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <h1 class="text-center">Welcome to Admin Panel!</h1>
+        <div th:if="${session.msg}" th:replace="message::message3"></div>
+
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <a th:href="@{/addgym}" style="text-decoration:none">
+
+                <div class="card text-center" >
+                    <div class="body">
+                        <div class="container">
+                            <img style="width: 37%" class="img-fluid rounded-circle"
+                                 th:src="@{/images/add.png}" alt="users">
+
+                        </div>
+                        <h1 class="text-muted"> Add Gym</h1>
+
+
+                    </div>
+                </div>
+                </a>
+        </div>
+
+
+
+            <div class="col-md-4">
+                <a th:href="@{/addtrainer}" style="text-decoration:none">
+
+                    <div class="card text-center" >
+                        <div class="body">
+                            <div class="container">
+                                <img style="width: 37%" class="img-fluid rounded-circle"
+                                     th:src="@{/images/add.png}" alt="users">
+
+                            </div>
+                            <h1 class="text-muted"> Add Gym Trainer</h1>
+
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <a th:href="@{/addHospital}" style="text-decoration:none">
+
+                    <div class="card text-center" >
+                        <div class="body">
+                            <div class="container">
+                                <img style="width: 37%" class="img-fluid rounded-circle"
+                                     th:src="@{/images/add.png}" alt="users">
+
+                            </div>
+                            <h1 class="text-muted"> Add Hospital</h1>
+
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+    </div>
+    </div>
+
+
+</section>
+
+</body>
+</html>

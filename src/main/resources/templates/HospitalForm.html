@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section style="background-color:blanchedalmond">
+    <div class="container">
+        <div class="card mt-3 justify-content-center" style="width: 70rem;background-color:grey" >
+            <div th:if="${session.msg}" th:replace="message::message5"></div>
+            <div class="card-body">
+                <form th:action="@{/addnewhospital}" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword2" class="form-label">Area</label>
+                        <input type="text" class="form-control" id="exampleInputPassword2" name="area">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword3" class="form-label">District</label>
+                        <input type="text" class="form-control" id="exampleInputPassword3" name="district">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
